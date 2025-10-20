@@ -16,4 +16,5 @@ tiny lua package that prints `hello, world` when you type `hello` in your termin
 
 run:
 
+```bash
 luarocks make hello-0.1-1.rockspec
