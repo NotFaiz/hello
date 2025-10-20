@@ -1,0 +1,14 @@
+#!/usr/bin/env lua
+local ok, hello = pcall(require, "hello")
+if not ok then
+  io.stderr:write("failed to load hello module: " .. tostring(hello) .. "\n")
+  os.exit(1)
+end
+
+if type(hello.main) == "function" then
+  hello.main()
+elseif type(hello) == "function" then
+  hello()
+else
+  print("hello, world")
+end
